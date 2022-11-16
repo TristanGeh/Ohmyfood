@@ -1,0 +1,348 @@
+/*********** Import ************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+/*********** Common Style ************/
+* {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*********** Import ************/
+/*********** Stylesheet ************/
+/*********** Loader ************/
+.loader .loader-container {
+  position: fixed;
+  background: hsla(0deg, 100%, 100%, 0.85);
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: loading 1.5s linear 0s forwards;
+          animation: loading 1.5s linear 0s forwards;
+}
+.loader .dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  margin: 0 15px;
+  -webkit-animation: loader 0.35s infinite alternate;
+          animation: loader 0.35s infinite alternate;
+}
+.loader .d1 {
+  background: #9356DC;
+  opacity: 1;
+}
+.loader .d2 {
+  background: #FF79DA;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+  opacity: 1;
+}
+.loader .d3 {
+  background: #99E2D0;
+  opacity: 1;
+}
+@-webkit-keyframes loading {
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes loading {
+  100% {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+/*********** Header ************/
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav .nav-logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+nav .nav-logo img {
+  width: 80%;
+}
+nav .nav-loc {
+  text-align: center;
+  width: 100%;
+  padding: 13px 0;
+  background-color: #E5E5E5;
+  border-top: 1px #E5E5E5 solid;
+  box-shadow: inset 0px 4px 11px -10px rgb(6, 6, 6);
+}
+nav .nav-loc .fa-location-dot {
+  position: relative;
+  right: 17px;
+}
+
+/*********** Infos ************/
+.main-info {
+  background-color: #f5F5F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+.main-info h1 {
+  font-size: 1.7em;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+.main-info p {
+  font-weight: 300;
+  font-size: 1.1em;
+  margin-bottom: 0px;
+}
+.main-info .info-btn {
+  margin-bottom: 45px;
+  height: 50px;
+  width: 210px;
+  box-shadow: 4px 4px 10px rgb(183, 183, 183);
+}
+.main-info .info-btn:hover {
+  filter: brightness(105%);
+  box-shadow: 6px 6px 10px rgb(183, 183, 183);
+}
+.main-info .info-btn a {
+  width: 210px;
+}
+
+/*********** Fonctionnement ************/
+.main-fonct {
+  padding: 40px 20px;
+}
+.main-fonct ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  height: 300px;
+  padding: 0;
+}
+.main-fonct li {
+  padding: 5px 28px 28px 15px;
+  margin-top: 7px;
+  margin-left: 8px;
+  border-radius: 20px;
+  background-color: #F5F5F5;
+  box-shadow: 4px 4px 10px rgb(183, 183, 183);
+}
+.main-fonct li:hover {
+  background-color: #F2E8FF;
+  transition: 0.2s;
+  box-shadow: 6px 6px 10px rgb(183, 183, 183);
+}
+.main-fonct li:hover .flogo {
+  color: #9356DC;
+}
+.main-fonct li .fa-solid {
+  padding-right: 20px;
+  padding-left: 15px;
+  color: #787878;
+}
+.main-fonct .list-numb {
+  color: white;
+  height: 20px;
+  width: 23px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  position: relative;
+  right: 27px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+}
+
+/*********** Restaurants ************/
+article {
+  position: relative;
+}
+
+.rest {
+  background-color: #F5F5F5;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+a {
+  margin-bottom: 1.2em;
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+
+.rest-cards {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.rest-cards img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  height: 170px;
+  -o-object-position: 50% 62%;
+     object-position: 50% 62%;
+}
+.rest-cards figure {
+  position: relative;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+  height: 245px;
+  width: 100%;
+  box-shadow: 2px 2px 10px rgb(216, 213, 213);
+}
+.rest-cards figure:hover {
+  box-shadow: 6px 6px 10px rgb(183, 183, 183);
+}
+.rest-cards figure p {
+  font-weight: 300;
+}
+.rest-cards figcaption {
+  display: flex;
+  justify-content: space-between;
+}
+.rest-cards .cards-img_francaise {
+  -o-object-position: 20% 90%;
+     object-position: 20% 90%;
+}
+
+.cards-caption h3 {
+  padding: 12px 0px 5px 10px;
+}
+.cards-caption p {
+  padding-left: 10px;
+}
+
+.cards-new {
+  position: absolute;
+  background-color: #99E2D0;
+  width: 62px;
+  height: 18px;
+  padding: 7px;
+  border-radius: 4px;
+  color: #238F6D;
+  bottom: 202px;
+  right: 10px;
+}
+.cards-new p {
+  font-weight: bolder;
+}
+
+.cards-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.cards-hearts {
+  font-size: 25px;
+  position: absolute;
+  right: 0;
+  bottom: 35px;
+}
+.cards-hearts:hover {
+  cursor: pointer;
+}
+
+.f-hearts {
+  opacity: 1;
+  background-color: white;
+}
+
+.s-hearts {
+  opacity: 0;
+  background: linear-gradient(33deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.s-hearts:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+/****************** Button ****************/
+.main-btn {
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.main-btn:hover {
+  filter: brightness(105%);
+  box-shadow: 6px 6px 10px rgb(183, 183, 183);
+}
+.main-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  width: 200px;
+  height: 50px;
+}
+
+/****************** Footer ****************/
+footer {
+  background-color: #363636;
+  padding-bottom: 15px;
+}
+footer img {
+  filter: invert(100%);
+  width: 120px;
+  margin-top: 30px;
+  margin-left: 19px;
+  padding-bottom: 15px;
+}
+footer a {
+  color: white;
+}
+footer ul {
+  padding-left: 20px;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer li i {
+  margin-right: 10px;
+}
+footer .fa-rotate-by {
+  transform: rotate(310deg);
+  width: 11px;
+}/*# sourceMappingURL=index.css.map */

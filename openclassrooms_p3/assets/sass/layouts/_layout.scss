@@ -1,0 +1,139 @@
+/*********** Header ************/
+nav{
+    display: flex;
+    align-items: center;
+}
+.fa-arrow-left{
+    color: black;
+    font-size: 20px;
+    padding: 20px 0px 20px 20px;
+}
+.nav-logo{
+    margin-left: 50px;
+}
+.header-img img{
+    object-fit: cover;
+    height: 230px;
+    width: 100%;
+}
+/*********** Main ************/
+main{
+    position: relative;
+    bottom: 50px;
+    background-color: $light-grey;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    margin-bottom: -65px;
+    border-radius: 40px 40px 0 0;
+}
+.cards-hearts{
+    font-size: 25px;
+    position: absolute;
+    right: 40px;
+    top: 37px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.f-hearts{
+    opacity: 1;
+    background-color: $light-grey;
+}
+.s-hearts{
+    opacity: 0;
+    background: linear-gradient(33deg, $Secondary, $Primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover{
+        @include s-hearts;
+    }
+}
+
+.main-title{
+    margin: 1em;
+    margin-bottom: -20px;
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+h2{
+    width: 42px;
+    height: 25px;
+    margin: 1em;
+    margin-bottom: 0px;
+    margin-top: 45px;
+    font-weight: 300;
+    font-size: 17px;
+    border-bottom: 3px solid $Tertiary ;
+    display: flex;
+    align-items: flex-end;
+}
+.menu-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+strong{
+    font-weight: 500;
+}
+.dish-cards{
+    display: flex;
+    overflow: hidden;
+    margin: 1em;
+    margin-bottom: -0.2em;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgb(202, 202, 202);
+    @include fadeIn;
+    &:hover{
+        @include check;
+        cursor: pointer;
+    }
+}
+.delay1{
+    animation-delay: 200ms;
+}
+.delay2{
+    animation-delay: 350ms;
+}
+.delay3{
+    animation-delay: 450ms;
+}
+.cards-price{
+    display: flex;
+    align-items: flex-end;
+    padding-right: 20px;
+    padding-bottom: 13px;
+}
+.cards-desc{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 13px;
+    @include ellipsis;
+}
+p{
+    font-weight: 300;
+    @include ellipsis;
+}
+h3{
+    padding-bottom: 5px;
+    @include ellipsis;
+}
+.cards-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    width: 4em;
+    margin-right: -4em;
+    background-color: $Tertiary;
+    border-radius: 0 15px 15px 0;
+    .fa-solid{
+        color: white;
+    }
+}

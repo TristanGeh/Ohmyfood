@@ -1,0 +1,11 @@
+@mixin box-shadow {
+    box-shadow: 4px 4px 10px rgb(183, 183, 183);
+}
+@mixin padding {
+    padding: 40px 20px;
+}
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

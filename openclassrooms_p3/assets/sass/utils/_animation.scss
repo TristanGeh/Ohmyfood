@@ -1,0 +1,92 @@
+@mixin loader-anim {
+    .loader-container{
+        position: fixed;
+        background: hsla(0, 100%, 100%, 0.85);
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: loading 1.5s linear 0s forwards ;
+    }
+    .dot{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: white;
+        margin: 0 15px;
+        animation: loader 0.35s infinite alternate;
+    }
+    .d1{
+        background: $Primary;
+        opacity: 1;
+    }
+    .d2{
+        background: $Secondary;
+        animation-delay: 0.35s;
+        opacity: 1;
+    }
+    .d3{
+        background: $Tertiary;
+        opacity: 1;
+    }
+    @keyframes loading {
+        100%{
+            visibility: hidden;
+        }
+    }
+    @keyframes loader{
+        100%{
+            transform: translateY(-30px);
+        }
+    }
+}
+@mixin fonct {
+    background-color: #F2E8FF;
+        transition: 0.2s;
+        box-shadow: 6px 6px 10px rgb(183, 183, 183);
+         .flogo{
+             color: $Primary;
+        }
+}
+
+@mixin hbutton {
+    filter: brightness(105%);
+    box-shadow: 6px 6px 10px rgb(183, 183, 183);
+}
+@mixin s-hearts {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+@mixin check {
+    @keyframes check-roll{
+        0%{
+            transform:rotate(360deg);
+        }
+        100%{
+            transform:rotate(0deg);
+        }
+    }
+    .fa-solid{
+        animation: check-roll 0.5s linear 0.1s reverse ;
+    }
+    .cards-check{
+        margin-right: 0px;
+        transition: margin-right 600ms ;
+    }
+}
+@mixin fadeIn {
+    opacity: 0;
+    animation: fadeIn 0.8s linear both;
+    @keyframes fadeIn{
+        0%{
+            transform: translateY(15px);
+            transform-origin: bottom;
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}

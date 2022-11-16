@@ -1,0 +1,280 @@
+/*********** Import ************/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+/*********** Common Style ************/
+* {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*********** Header ************/
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.fa-arrow-left {
+  color: black;
+  font-size: 20px;
+  padding: 20px 0px 20px 20px;
+}
+
+.nav-logo {
+  margin-left: 50px;
+}
+
+.header-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 230px;
+  width: 100%;
+}
+
+/*********** Main ************/
+main {
+  position: relative;
+  bottom: 50px;
+  background-color: #F5F5F5;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  margin-bottom: -65px;
+  border-radius: 40px 40px 0 0;
+}
+
+.cards-hearts {
+  font-size: 25px;
+  position: absolute;
+  right: 40px;
+  top: 37px;
+}
+.cards-hearts:hover {
+  cursor: pointer;
+}
+
+.f-hearts {
+  opacity: 1;
+  background-color: #F5F5F5;
+}
+
+.s-hearts {
+  opacity: 0;
+  background: linear-gradient(33deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.s-hearts:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.main-title {
+  margin: 1em;
+  margin-bottom: -20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-size: 28px;
+}
+
+h2 {
+  width: 42px;
+  height: 25px;
+  margin: 1em;
+  margin-bottom: 0px;
+  margin-top: 45px;
+  font-weight: 300;
+  font-size: 17px;
+  border-bottom: 3px solid #99E2D0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.menu-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.dish-cards {
+  display: flex;
+  overflow: hidden;
+  margin: 1em;
+  margin-bottom: -0.2em;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgb(202, 202, 202);
+  opacity: 0;
+  -webkit-animation: fadeIn 0.8s linear both;
+          animation: fadeIn 0.8s linear both;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    transform: translateY(15px);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateY(15px);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dish-cards:hover {
+  cursor: pointer;
+}
+@-webkit-keyframes check-roll {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes check-roll {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.dish-cards:hover .fa-solid {
+  animation: check-roll 0.5s linear 0.1s reverse;
+}
+.dish-cards:hover .cards-check {
+  margin-right: 0px;
+  transition: margin-right 600ms;
+}
+
+.delay1 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.delay2 {
+  -webkit-animation-delay: 350ms;
+          animation-delay: 350ms;
+}
+
+.delay3 {
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
+}
+
+.cards-price {
+  display: flex;
+  align-items: flex-end;
+  padding-right: 20px;
+  padding-bottom: 13px;
+}
+
+.cards-desc {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+p {
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h3 {
+  padding-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cards-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  width: 4em;
+  margin-right: -4em;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+.cards-check .fa-solid {
+  color: white;
+}
+
+/****************** Button ****************/
+.main-btn {
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.main-btn:hover {
+  filter: brightness(105%);
+  box-shadow: 6px 6px 10px rgb(183, 183, 183);
+}
+.main-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  width: 200px;
+  height: 50px;
+}
+
+/****************** Footer ****************/
+footer {
+  background-color: #363636;
+  padding-bottom: 15px;
+}
+footer img {
+  filter: invert(100%);
+  width: 120px;
+  margin-top: 30px;
+  margin-left: 19px;
+  padding-bottom: 15px;
+}
+footer a {
+  color: white;
+}
+footer ul {
+  padding-left: 20px;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer li i {
+  margin-right: 10px;
+}
+footer .fa-rotate-by {
+  transform: rotate(310deg);
+  width: 11px;
+}/*# sourceMappingURL=restaurants.css.map */

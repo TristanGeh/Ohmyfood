@@ -1,0 +1,30 @@
+/****************** Footer ****************/
+footer{
+    background-color: $color-footer;
+    padding-bottom: 15px;
+
+    img{
+        filter: invert(100%);
+        width: 120px;
+        margin-top: 30px;
+        margin-left: 19px;
+        padding-bottom: 15px;
+    }
+    a{
+        color: white;
+    }
+    ul{
+        padding-left: 20px;
+    }
+    li{
+        margin-bottom: 10px;
+    
+        & i{
+            margin-right: 10px;
+        }
+    }
+    .fa-rotate-by{
+        transform: rotate(310deg);
+        width: 11px;
+    }
+}

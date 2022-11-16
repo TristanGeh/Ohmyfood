@@ -1,0 +1,5 @@
+@mixin tablet-index {
+    @media screen and (min-width: map-get($breakpoints,tablet)) {
+        @content;
+    }
+}
