@@ -136,7 +136,7 @@ article{
     background-color: $light-grey;
     @include padding;
     @include md-desktop{
-        padding-bottom: 5em;
+        padding-bottom: 10em;
     }
 }
 a{
@@ -153,7 +153,7 @@ h2{
         margin-right: 1em;
         width: 45%;
     }
-    @include desktop{
+    @include md-desktop{
         width: 30%;
     }
     img {

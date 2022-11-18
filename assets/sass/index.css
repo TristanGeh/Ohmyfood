@@ -216,7 +216,7 @@ article {
 }
 @media screen and (min-width: 1150px) {
   .rest {
-    padding-bottom: 20vh;
+    padding-bottom: 10em;
   }
 }
 
@@ -359,13 +359,6 @@ h2 {
 footer {
   background-color: #363636;
   padding-bottom: 15px;
-}
-@media screen and (min-width: 1150px) {
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
 }
 footer img {
   filter: invert(100%);
