@@ -1,5 +1,11 @@
-@mixin tablet-index {
+@import "./map";
+@mixin md-tablet {
     @media screen and (min-width: map-get($breakpoints,tablet)) {
+        @content;
+    }
+}
+@mixin md-desktop {
+    @media screen and (min-width: map-get($breakpoints,desktop)) {
         @content;
     }
 }

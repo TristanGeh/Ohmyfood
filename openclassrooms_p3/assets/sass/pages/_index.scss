@@ -2,6 +2,7 @@
 @import "../utils/mixin";
 @import "../utils/variables";
 @import "../utils/animation";
+@import "../utils/mediaqueries";
 /*********** Stylesheet ************/
 /*********** Loader ************/
 .loader{
@@ -77,6 +78,10 @@ nav {
         align-content: center;
         height: 300px;
         padding: 0;
+        @include md-tablet{
+            flex-direction: row;
+            height: 5em;
+        }
     }
     li {
         padding: 5px 28px 28px 15px;
@@ -85,6 +90,9 @@ nav {
         border-radius: 20px;
         background-color: $light-grey;
         @include box-shadow;
+        @include md-tablet{
+            width: 25%;
+        }
         &:hover {
             @include fonct
         }
@@ -113,12 +121,22 @@ article{
     position: relative;
 
 }
+.restaurants{
+    @include md-tablet{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @include md-desktop{
+        flex-wrap: nowrap;
+    }
+}
 .rest {
     background-color: $light-grey;
     @include padding;
-    @include tablet-index{
-        display: flex;
-        flex-direction: row;
+    @include md-desktop{
+        padding-bottom: 5em;
     }
 }
 a{
@@ -131,6 +149,13 @@ h2{
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    @include md-tablet{
+        margin-right: 1em;
+        width: 45%;
+    }
+    @include desktop{
+        width: 30%;
+    }
     img {
         object-fit: cover;
         width: 100%;
@@ -183,7 +208,6 @@ h2{
         font-weight: bolder;
     }
 }
-
 .cards-icon{
     position: absolute;
     right: 20px;

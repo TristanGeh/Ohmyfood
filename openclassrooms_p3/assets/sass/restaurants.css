@@ -41,9 +41,33 @@ main {
   bottom: 50px;
   background-color: #F5F5F5;
   padding-top: 15px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   margin-bottom: -65px;
   border-radius: 40px 40px 0 0;
+}
+@media screen and (min-width: 768px) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  main {
+    padding-bottom: 230px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .menu {
+    justify-content: space-around;
+  }
 }
 
 .cards-hearts {
@@ -101,7 +125,6 @@ h2 {
 .menu-cards {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 strong {
@@ -138,6 +161,16 @@ strong {
   }
   100% {
     opacity: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .dish-cards {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .dish-cards {
+    width: 400px;
   }
 }
 .dish-cards:hover {
@@ -180,6 +213,11 @@ strong {
 .delay3 {
   -webkit-animation-delay: 450ms;
           animation-delay: 450ms;
+}
+
+.delay4 {
+  -webkit-animation-delay: 550ms;
+          animation-delay: 550ms;
 }
 
 .cards-price {

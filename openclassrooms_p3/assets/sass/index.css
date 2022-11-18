@@ -145,6 +145,12 @@ nav .nav-loc .fa-location-dot {
   height: 300px;
   padding: 0;
 }
+@media screen and (min-width: 768px) {
+  .main-fonct ul {
+    flex-direction: row;
+    height: 5em;
+  }
+}
 .main-fonct li {
   padding: 5px 28px 28px 15px;
   margin-top: 7px;
@@ -152,6 +158,11 @@ nav .nav-loc .fa-location-dot {
   border-radius: 20px;
   background-color: #F5F5F5;
   box-shadow: 4px 4px 10px rgb(183, 183, 183);
+}
+@media screen and (min-width: 768px) {
+  .main-fonct li {
+    width: 25%;
+  }
 }
 .main-fonct li:hover {
   background-color: #F2E8FF;
@@ -185,13 +196,28 @@ article {
   position: relative;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .restaurants {
+    flex-wrap: nowrap;
+  }
+}
+
 .rest {
   background-color: #F5F5F5;
   padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
+}
+@media screen and (min-width: 1150px) {
+  .rest {
+    padding-bottom: 20vh;
+  }
 }
 
 a {
@@ -206,6 +232,17 @@ h2 {
   display: flex;
   flex-direction: column;
   align-content: space-around;
+}
+@media screen and (min-width: 768px) {
+  .rest-cards {
+    margin-right: 1em;
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .rest-cards {
+    width: 30%;
+  }
 }
 .rest-cards img {
   -o-object-fit: cover;
@@ -322,6 +359,13 @@ h2 {
 footer {
   background-color: #363636;
   padding-bottom: 15px;
+}
+@media screen and (min-width: 1150px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 }
 footer img {
   filter: invert(100%);

@@ -22,9 +22,26 @@ main{
     bottom: 50px;
     background-color: $light-grey;
     padding-top: 15px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
     margin-bottom: -65px;
     border-radius: 40px 40px 0 0;
+    @include md-tablet{
+        padding-bottom: 50px;
+    }
+    @include md-desktop{
+        padding-bottom: 230px;
+    }
+}
+.menu{
+    @include md-tablet{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @include md-desktop{
+        justify-content: space-around;
+    }
 }
 .cards-hearts{
     font-size: 25px;
@@ -75,7 +92,6 @@ h2{
 .menu-cards{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 strong{
     font-weight: 500;
@@ -89,6 +105,12 @@ strong{
     border-radius: 15px;
     box-shadow: 4px 4px 15px rgb(202, 202, 202);
     @include fadeIn;
+    @include md-tablet{
+        width: 350px;
+    }
+    @include md-desktop{
+        width: 400px;
+    }
     &:hover{
         @include check;
         cursor: pointer;
@@ -102,6 +124,9 @@ strong{
 }
 .delay3{
     animation-delay: 450ms;
+}
+.delay4{
+    animation-delay: 550ms;
 }
 .cards-price{
     display: flex;
