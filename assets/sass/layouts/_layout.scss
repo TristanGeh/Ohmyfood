@@ -29,7 +29,10 @@ main{
         padding-bottom: 50px;
     }
     @include md-desktop{
-  
+        padding-bottom: 150px;
+    }
+    @include md-lg-desktop{
+        padding-bottom: 340px;
     }
 }
 .menu{
@@ -76,6 +79,7 @@ main{
 h1{
     font-family: "Shrikhand", Arial, Helvetica, sans-serif;
     font-size: 28px;
+    @include ellipsis;
 }
 h2{
     width: 42px;

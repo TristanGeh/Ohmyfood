@@ -9,3 +9,8 @@
         @content;
     }
 }
+@mixin md-lg-desktop {
+    @media screen and (min-width: map-get($breakpoints,lg-desktop)) {
+        @content;
+    }
+}

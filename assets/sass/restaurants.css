@@ -50,6 +50,17 @@ main {
     padding-bottom: 50px;
   }
 }
+@media screen and (min-width: 1150px) {
+  main {
+    padding-bottom: 150px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main {
+    padding-bottom: 340px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .menu {
     display: flex;
@@ -101,6 +112,9 @@ main {
 h1 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   font-size: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 h2 {
