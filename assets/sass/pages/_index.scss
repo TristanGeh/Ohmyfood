@@ -138,6 +138,9 @@ article{
     @include md-desktop{
         padding-bottom: 10em;
     }
+    @include md-lg-desktop{
+        padding-bottom: 14.5em;
+    }
 }
 a{
     margin-bottom: 1.2em;
